@@ -42,7 +42,7 @@ const Blog=()=>{
         </div>
 
         <div className="blog-area flex">
-            {blog.map((item,index)=>{
+            {blog.length> 0 ? blog.map((item,index)=>{
                 return(
                 <div key={index} className="w-96 text-left bg-slate-50 p-5 rounded-lg shadow-lg m-2">
                 <img className="text-center rounded-md" src={item.inputImg} alt="" />
@@ -50,7 +50,11 @@ const Blog=()=>{
                 <p className="text-sm">{item.textArea}</p>
             </div>
                 );
-            })}
+
+            }):(
+                <p className="p-2 bg-slate-50 rounded-lg shadow-lg m-2 w-96">No data found</p>
+            ) 
+        }
             
 
             
