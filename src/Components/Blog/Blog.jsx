@@ -32,7 +32,7 @@ const Blog=()=>{
 
     return(
         <>
-         <div className="w-96 text-left bg-slate-50 p-5 rounded-lg shadow-lg">
+         <div className="w-96 text-left bg-slate-50 p-5 rounded-lg shadow-lg m-2">
             <input onChange={handleHeadingInput} value={heading} type="text" placeholder="Enter Post Heading" className="border-2 p-2 rounded-md border-gray-900 w-40 mr-1" />
             
             <input onChange={handleInputImg} value={inputImg} type="text" placeholder="Enter post image link" className="border-2 p-2 rounded-md border-gray-900 w-44" /> <br />
@@ -45,7 +45,7 @@ const Blog=()=>{
 
             {blog.length> 0 ? blog.map((item,index)=>{
                 return(
-                <div key={index} className="w-96 text-left bg-slate-50 p-2 rounded-lg shadow-lg">
+                <div key={index} className="w-96 text-left bg-slate-50 p-5 rounded-lg shadow-lg m-2">
                 <img className="text-center rounded-md" src={item.inputImg} alt="" />
                 <h1 className="text-orange-800 py-3 font-bold text-base">{item.heading}</h1>
                 <p className="text-sm">{item.textArea}</p>
@@ -53,7 +53,7 @@ const Blog=()=>{
                 );
 
             }):(
-                <p className=" bg-slate-50 rounded-lg shadow-lg p-5 w-96 mt-2">No data found</p>
+                <p className="w-96 text-left bg-slate-50 p-5 rounded-lg shadow-lg m-2">No data found</p>
             ) 
         }
             
